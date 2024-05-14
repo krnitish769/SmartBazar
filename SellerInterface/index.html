@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store Seller App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .app-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto 50px; /* Adjusted margin */
+            text-align: center;
+        }
+
+        .search-bar-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .search-bar {
+            width: 70%;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        .search-button {
+            width: 30%;
+            height: 40px;
+            margin-left: 10px;
+            background-color: #0a9e0e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .button {
+            display: block;
+            width: 200px;
+            height: 50px;
+            margin: 0 auto 20px;
+            background-color: #109314;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        /* Top status bar */
+        .top-bar {
+            background-color: #1b1b1b;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 20px; /* Added vertical space */
+            /* border-radius: 5px;  */
+        }
+
+        .hamburger-icon {
+            cursor: pointer;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            color: #fff;
+            transition: right 0.3s;
+            overflow-y: auto;
+            padding-top: 60px; /* Adjust for top bar height */
+        }
+
+        .sidebar.open {
+            right: 0;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar li {
+            padding: 10px;
+            border-bottom: 1px solid #666;
+        }
+
+        .sidebar li:last-child {
+            border-bottom: none;
+        }
+
+        .sidebar li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .sidebar li:hover {
+            background-color: #555;
+        }
+
+        .sidebar .close-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <div class="top-bar">
+            <h1>Grocery Store Seller App</h1>
+            <div class="hamburger-icon" onclick="toggleSidebar()">☰</div>
+        </div>
+
+        <div class="search-bar-container">
+            <input type="text" class="search-bar" placeholder="Search products...">
+            <button class="search-button">Search</button>
+        </div>
+
+        <div class="container">
+            <button class="button">Add Product</button>
+            <button class="button">Manage Inventory</button>
+            <button class="button">Analytics</button>
+            <button class="button">Messages/Notifications</button>
+            <button class="button">Help/Support</button>
+        </div>
+
+        <div class="sidebar" id="sidebar">
+            <div class="close-icon" onclick="toggleSidebar()">☰</div>
+            <ul>
+                <li><a href="#">Username</a></li>
+                <li><a href="#">ID</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

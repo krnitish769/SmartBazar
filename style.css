@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    height: 12rem;
+    background-color: aquamarine;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#titleBox {
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#title {
+    font-size: 45px;
+    font-variant: small-caps;
+    text-shadow: 2px 2px 4px black;
+    margin-top: 30px;
+}
+#navDiv {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
+}
+#navHeader {
+    width: 100%;
+    ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-evenly;
+        li {
+            width: 100%;
+            font-size: large;
+            text-align: center;
+            a{
+                text-decoration: none;
+                color: black;
+                display: block;
+                padding: 3px 50px;
+            }
+        }
+    }
+    transition: transform 0.3s ease;
+}
+#navHeader ul li a:hover {
+    background-color: rgb(2, 223, 90);
+    transform: scale(1.2);
+    border: 1px solid black;
+    padding: 3px 20px;
+}
+#navHeader ul li a:active {
+    background-color: rgb(2, 223, 90);
+    transform: scale(1.2);
+    border: 1px solid black;
+    padding: 3px 20px;
+}
+#navHeader ul:hover {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#navHeader ul:active {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* Main */
+main {
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content {
+    height: 30rem;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: x-large;
+    }
+}
+.interfaceBoxes {
+    border: 2px solid black;
+    height: 13rem;
+    width: 60%;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease-in;
+}
+.interfaceBoxes:hover {
+    transform: scale(1.2);
+}
+#customerInterface {
+    background-color: rgb(18, 122, 7);
+}
+#sellerInterface {
+    background-color: rgb(141, 0, 0);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+#footerTop {
+    height: 2rem;
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footerMid {
+    height: 8rem;
+    h3 {
+        width: 100%;
+        padding: 5px;
+        border-bottom: 1px solid white;
+    }
+}
+#navContact {
+    width: 100%;
+    ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-evenly;
+        li {
+            font-size: large;
+            a{
+                text-decoration: none;
+                color: black;
+                display: block;
+                padding: 3px 50px;
+            }
+        }
+    }
+}
+#footerBottom {
+    h4 {
+        font-size: medium;
+        border-top: 1px solid white;
+        padding: 4px;
+    }
+    p {
+        font-size: small;
+        border-top: 1px solid white;
+    }
+}
